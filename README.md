@@ -38,7 +38,10 @@
   - EASY: THINK OF REALISTIC/USEFUL WAYS TO COMBINE FUNCTIONS
   - HARD: IMPLEMENT CODE TO GENERATE CODE
 
-## simple example to get started
+## run-through conceptual examples
+
+<details>
+<summary>simple example to get started</summary>
 
 - state
   - window
@@ -49,43 +52,43 @@
   - outputObject === window
 - actions
 
-  - get actions by searching the input window object API of props + functions for things that most closely match width
+- get actions by searching the input window object API of props + functions for things that most closely match width
 
-    ```js
-    // reference https://github.com/hchiam/code-explorer/blob/master/public/api-search.js
-    function findKeys(obj, lookingFor) {
-      const keys = new Set();
-      Object.keys(obj).map((k) => {
-        keys.add(k);
-      });
-      Object.keys(Object.getPrototypeOf(obj)).map((k) => {
-        keys.add(k);
-      });
-      if (obj.__proto__ && Object.getPrototypeOf(obj.__proto__)) {
-        Object.getOwnPropertyNames(Object.getPrototypeOf(obj.__proto__)).map(
-          (k) => {
-            keys.add(k);
-          }
-        );
-      }
-      Object.getOwnPropertyNames(obj).map((k) => {
-        keys.add(k);
-      });
-      const matches = [];
-      const found = [...keys].some((k) => {
-        const found = k.toLowerCase().includes(lookingFor.toLowerCase());
-        if (found) matches.push(k);
-      });
-      return matches;
+  ```js
+  // reference https://github.com/hchiam/code-explorer/blob/master/public/api-search.js
+  function findKeys(obj, lookingFor) {
+    const keys = new Set();
+    Object.keys(obj).map((k) => {
+      keys.add(k);
+    });
+    Object.keys(Object.getPrototypeOf(obj)).map((k) => {
+      keys.add(k);
+    });
+    if (obj.__proto__ && Object.getPrototypeOf(obj.__proto__)) {
+      Object.getOwnPropertyNames(Object.getPrototypeOf(obj.__proto__)).map(
+        (k) => {
+          keys.add(k);
+        }
+      );
     }
-    console.log(findKeys(Math, "pow"));
-    console.log(findKeys(NaN, "string"));
-    // TODO: get google description of object.key
-    // TODO: show user the info and ask user permission
-    // TODO: add to list of allowed actions
-    // TODO: perform actions that were allowed
-    // TODO: always ask about actions that weren't allowed
-    ```
+    Object.getOwnPropertyNames(obj).map((k) => {
+      keys.add(k);
+    });
+    const matches = [];
+    const found = [...keys].some((k) => {
+      const found = k.toLowerCase().includes(lookingFor.toLowerCase());
+      if (found) matches.push(k);
+    });
+    return matches;
+  }
+  console.log(findKeys(Math, "pow"));
+  console.log(findKeys(NaN, "string"));
+  // TODO: get google description of object.key
+  // TODO: show user the info and ask user permission
+  // TODO: add to list of allowed actions
+  // TODO: perform actions that were allowed
+  // TODO: always ask about actions that weren't allowed
+  ```
 
 - reading
   - search google / sourceFetch-server
@@ -180,7 +183,12 @@
   }
   ```
 
-## harder example to get more useful
+</details>
+
+<hr/>
+
+<details>
+<summary>harder example to get more useful</summary>
 
 - state
   - document.body
@@ -203,6 +211,8 @@
     - (just stick to low-level APIs for now?)
 - ideation
   - (see JS code in previous example)
+
+</details>
 
 ## TODO
 
