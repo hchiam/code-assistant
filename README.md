@@ -216,10 +216,10 @@
 
 ## TODO
 
-- TODO: add getting code snippets from codegrepper
-- TODO: try adding snippets from MDN to the sourceFetch-server
-- TODO: consider using a synonym search engine
-- TODO: flesh out more of the 2 ideation code snippets
+- TODO: add getting code snippets from codegrepper ([#2](https://github.com/hchiam/code-assistant/issues/2))
+- TODO: try adding snippets from MDN to the sourceFetch-server ([#3](https://github.com/hchiam/code-assistant/issues/3))
+- TODO: consider using a synonym search engine ([#5](https://github.com/hchiam/code-assistant/issues/5))
+- TODO: flesh out more of the 2 ideation code snippets ([#4](https://github.com/hchiam/code-assistant/issues/4))
 
 ## earlier idea
 
